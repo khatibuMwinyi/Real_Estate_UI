@@ -1,0 +1,105 @@
+@use "../../responsiveness.scss" as mixin;
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+
+  a {
+    transition: all 0.9s ease;
+
+    @include mixin.sm {
+      display: none;
+    }
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex: 3;
+    align-items: center;
+    gap: 50px;
+
+    .logo {
+      display: flex;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      align-items: center;
+
+      span {
+        @include mixin.md {
+          display: none;
+        }
+
+        @include mixin.sm {
+          display: initial;
+        }
+      }
+
+      img {
+        width: 20px;
+      }
+    }
+  }
+  .right {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fcf5f3;
+    height: 100%;
+
+    @include mixin.md {
+      background-color: transparent;
+    }
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+    .register {
+      background-color: #fece51;
+    }
+    .menuIcon {
+      display: none;
+      z-index: 90;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+      @include mixin.sm {
+        display: inline;
+      }
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -70%;
+      width: 50%;
+      height: 100vh;
+      background-color: black;
+      color: white;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+
+      &.active {
+        right: 0;
+      }
+
+      @include mixin.sm {
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
+}
