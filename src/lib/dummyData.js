@@ -271,3 +271,33 @@ export const listData = [
     longitude: 33.45,
   },
 ];
+
+export const singlePostData = {
+  id: 50,
+  title: "Modern Apartment in Mbeya",
+  price: 115000,
+  images: [
+    "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&w=600",
+  ],
+  bedroom: 1,
+  bathroom: 1,
+  size: 861,
+  latitude: -8.9,
+  longitude: 33.45,
+  city: "Mbeya",
+  address: "1234 Mbalizi street",
+  school: "250m away",
+  bus: "100m away",
+  restaurant: "20m away",
+  description:
+    "Nestled off the scenic Mbalizi Road in Mbeya, this charming house offers a serene and inviting living experience. Surrounded by lush gardens, the property boasts earthy tones that harmonize beautifully with its natural setting. Inside, light-filled rooms feature modern amenities and large windows offering captivating hill views. A peaceful patio provides the perfect spot to relax or entertain, seamlessly extending the living space outdoors. Conveniently located near schools, markets, and transportation, this home is an ideal choice for those seeking comfort, style, and a connection to nature in one of Mbeya's most picturesque areas.",
+};
+
+export const userData = {
+  id: 1,
+  name: "Junior Khatib",
+  img: "https://avatars.githubusercontent.com/u/153388904?v=4",
+};
