@@ -1,12 +1,28 @@
+@use "../../responsiveness.scss" as mixin;
 .singlePage {
   display: flex;
   height: 100%;
 
+  @include mixin.md {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
   .details {
     flex: 3;
+    height: 100%;
 
+    @include mixin.md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
     .wrapper {
       padding-right: 50px;
+
+      @include mixin.sm {
+        padding: none;
+      }
       .info {
         margin-top: 50px;
         .top {
@@ -71,5 +87,111 @@
   .features {
     flex: 2;
     background-color: #fcf5f3;
+    height: 100%;
+
+    @include mixin.sm {
+      padding: none;
+    }
+
+    @include mixin.md {
+      flex: none;
+      height: max-content;
+      margin-bottom: 50px;
+    }
+
+    .wrapper {
+      padding: 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+          background-color: rgb(254, 205, 81, 0.205);
+        }
+        .featureText {
+          span {
+            font-weight: bold;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .listVertical {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px 10px;
+      }
+      .listHorizontal {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px 10px;
+      }
+
+      .sizes {
+        display: flex;
+        justify-content: space-between;
+
+        @include mixin.lg {
+          font-size: 12px;
+        }
+
+        .size {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: white;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+      .mapContainer {
+        width: 100%;
+        height: 200px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          padding: 20px;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          background-color: white;
+          border: 1px solid #fece51;
+          border-radius: 5px;
+          cursor: pointer;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
   }
 }
