@@ -1,0 +1,84 @@
+@use ".././../responsiveness.scss" as mixin;
+
+.profile {
+  display: flex;
+  height: 100%;
+
+  @include mixin.md {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .details {
+    flex: 3;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+
+    @include mixin.md {
+      flex: none;
+      height: max-content;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding-right: 50px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h1 {
+          font-weight: 300;
+          font-size: 30px;
+        }
+
+        button {
+          background-color: #fece51;
+          padding: 12px 24px;
+          cursor: pointer;
+          border: none;
+        }
+      }
+      .userDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .detail {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          span {
+            font-weight: bold;
+          }
+        }
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    height: 100%;
+    background: #fcf5f3;
+
+    @include mixin.md {
+      flex: none;
+      height: max-content;
+    }
+  }
+
+  .wrapper {
+    padding: 0px 20px;
+    height: 100%;
+  }
+}
